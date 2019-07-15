@@ -7,16 +7,16 @@ cache:
 before_install:
   - export TZ='Asia/Shanghai'
   - npm install hexo-cli -g
+  - chmod +x ./publish-to-gh-pages.sh  # 为shell文件添加可执行权限
 install:
   - npm install
-before_script:
-  - git config user.name "Shenmiu"
-  - git config user.email "gcm971016@gmail.com"
-  - sed -i'' "s~https://${GH_REF}~https://${GH_TOKEN}@${GH_REF}~" _config.yml
+
 script:
   - hexo clean
   - hexo g
-  - hexo d
+
+after_script:
+  - ./publish-to-gh-pages.sh
 
 branches:
   only:
