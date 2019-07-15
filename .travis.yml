@@ -1,0 +1,27 @@
+language: node_js # 设置语言
+node_js: stable # 设置响应版本
+cache:
+  apt: true
+  directories:
+    - node_modules # 缓存不经常更改的内容
+before_install:
+  - export TZ='Asia/Shanghai'
+  - npm install hexo-cli -g
+install:
+  - npm install
+before_script:
+  - git config user.name "Shenmiu"
+  - git config user.email "gcm971016@gmail.com"
+  - sed -i'' "s~https://${GH_REF}~https://${GH_TOKEN}@${GH_REF}~" _config.yml
+script:
+  - hexo c
+  - hexo g
+  - hexo d
+
+branches:
+  only:
+    - hexo #只监测hexo分支
+
+env:
+  global:
+    - GH_REF: github.com/Shenmiu/shenmiu.github.io.git #设置GH_REF，注意更改
