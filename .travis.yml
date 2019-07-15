@@ -14,7 +14,7 @@ before_script:
   - git config user.email "gcm971016@gmail.com"
   - sed -i'' "s~https://${GH_REF}~https://${GH_TOKEN}@${GH_REF}~" _config.yml
 script:
-  - hexo c
+  - hexo clean
   - hexo g
   - hexo d
 
