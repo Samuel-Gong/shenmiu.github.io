@@ -6,13 +6,14 @@ cache:
     - node_modules # 缓存不经常更改的内容
 before_install:
   - npm install hexo-cli -g
+  - export TZ='Asia/Shanghai'
 install:
   - npm install
 
 before_script:
   - git config user.name "Shenmiu"
   - git config user.email "gcm971016@gmail.com"
-  - sed -i'' "s~https://${GH_REF}~https://${GITHUB_ACCESS_TOKEN}@${GH_REF}~" _config.yml
+  - sed -i'' "s~https://${GH_REF}~https://${GH_TOKEN}@${GH_REF}~" _config.yml
 
 script:
   - hexo clean
