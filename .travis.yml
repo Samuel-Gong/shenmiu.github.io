@@ -6,6 +6,8 @@ cache:
     - node_modules # 缓存不经常更改的内容
 before_install:
   - npm install hexo-cli -g
+  - npm install babel-runtime
+  - npm install hexo-leancloud-counter-security --save
   - export TZ='Asia/Shanghai'
 install:
   - npm install
@@ -13,6 +15,7 @@ install:
 before_script:
   - git config user.name "Shenmiu"
   - git config user.email "gcm971016@gmail.com"
+  # 恢复 git 记录 
   - sed -i'' "s~https://${GH_REF}~https://${GH_TOKEN}@${GH_REF}~" _config.yml
   - git clone https://${GH_REF} bak
   - cd bak
@@ -20,6 +23,9 @@ before_script:
   - cd ../
   - mkdir .deploy_git
   - mv bak/.git/ .deploy_git
+  # leancloud security
+  - sed -i '' 's/\(username:\)/\1${LEAN_USERNAME}/' _config.yml
+  - sed -i '' 's/\(password:\)/\1${LEAN_PWD}/' _config.yml
 
 script:
   - hexo clean
