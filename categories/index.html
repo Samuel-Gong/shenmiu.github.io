@@ -93,17 +93,14 @@
 
 
 
-  <meta name="description" content="软件工程实践">
-<meta property="og:type" content="website">
-<meta property="og:title" content="categories">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Shenmiu’s Blog">
 <meta property="og:url" content="http://blog.shenmiu.top/categories/index.html">
 <meta property="og:site_name" content="Shenmiu’s Blog">
-<meta property="og:description" content="软件工程实践">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-16T07:34:21.215Z">
+<meta property="og:updated_time" content="2019-07-19T07:23:12.928Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="categories">
-<meta name="twitter:description" content="软件工程实践">
+<meta name="twitter:title" content="Shenmiu’s Blog">
 
 
 
@@ -121,7 +118,7 @@
   };
 </script>
 
-  <title>categories | Shenmiu’s Blog</title>
+  <title>分类 | Shenmiu’s Blog</title>
   
 
 
@@ -233,6 +230,22 @@
         
         
           
+          <li class="menu-item menu-item-about">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
           <li class="menu-item menu-item-tags">
 
     
@@ -316,6 +329,9 @@
       
       
     
+      
+      
+    
     
 
   
@@ -332,7 +348,7 @@
     <div class="post-block page">
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">categories
+<h1 class="post-title" itemprop="name headline">
 
 </h1>
 
@@ -411,7 +427,7 @@
               <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="Shenmiu">
             
               <p class="site-author-name" itemprop="name">Shenmiu</p>
-              <div class="site-description motion-element" itemprop="description">软件工程实践</div>
+              <div class="site-description motion-element" itemprop="description"></div>
           </div>
 
           
@@ -471,6 +487,21 @@
 
           
 
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/gcm971016@gmail.com" title="E-Mail &rarr; gcm971016@gmail.com"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+            </div>
           
 
           
@@ -623,6 +654,74 @@
 
 
   
+  
+  <script>
+    
+    function showTime(Counter) {
+      var entries = [];
+      var $visitors = $('.leancloud_visitors');
+
+      $visitors.each(function() {
+        entries.push( $(this).attr('id').trim() );
+      });
+
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url: { '$in': entries } }) })
+        .done(function({ results }) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.url;
+            var time = item.time;
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for (var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if (countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function ({ responseJSON }) {
+          console.log('LeanCloud Counter Error: ' + responseJSON.code + ' ' + responseJSON.error);
+        });
+    }
+    
+
+    $(function() {
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'BjsVlUcyDiTiy2fJ9zpYDr5h-gzGzoHsz')
+        .done(function({ api_server }) {
+          var Counter = function(method, url, data) {
+            return $.ajax({
+              method: method,
+              url: 'https://' + api_server + '/1.1' + url,
+              headers: {
+                'X-LC-Id': 'BjsVlUcyDiTiy2fJ9zpYDr5h-gzGzoHsz',
+                'X-LC-Key': 'XE488fVKshgesnaeW2jzP6ID',
+                'Content-Type': 'application/json',
+              },
+              data: data
+            });
+          };
+          
+            if ($('.post-title-link').length >= 1) {
+              showTime(Counter);
+            }
+          
+        });
+    });
+  </script>
+
+
 
   
 
