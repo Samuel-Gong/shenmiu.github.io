@@ -24,8 +24,8 @@ before_script:
   - mkdir .deploy_git
   - mv bak/.git/ .deploy_git
   # leancloud security
-  - sed -i '' 's/\(username:\)/\1${LEAN_USERNAME}/' _config.yml
-  - sed -i '' 's/\(password:\)/\1${LEAN_PWD}/' _config.yml
+  - sed -i'' "s/\(username:\)/\1${LEAN_USERNAME}/" _config.yml
+  - sed -i'' "s/\(password:\)/\1${LEAN_PWD}/" _config.yml
 
 script:
   - hexo clean
