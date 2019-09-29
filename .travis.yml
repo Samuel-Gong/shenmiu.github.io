@@ -7,7 +7,6 @@ cache:
 before_install:
   - npm install hexo-cli -g
   - npm install babel-runtime
-  - npm install hexo-leancloud-counter-security --save
   - npm install hexo-generator-searchdb --save
   - export TZ='Asia/Shanghai'
 install:
@@ -24,9 +23,6 @@ before_script:
   - cd ../
   - mkdir .deploy_git
   - mv bak/.git/ .deploy_git
-  # leancloud security
-  - sed -i'' "s/username:/username:\ ${LEAN_USERNAME}/" _config.yml
-  - sed -i'' "s/password:/password:\ ${LEAN_PWD}/" _config.yml
 
 script:
   - hexo clean && hexo g && hexo d
