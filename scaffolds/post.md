@@ -1,7 +1,12 @@
 ---
 title: {{ title }}
+author: Shenmiu
 date: {{ date }}
 categories:
+- 类别
 tags:
-author: Shenmiu
+- 标签
+urlname: urlname
+mathjax: true
 ---
+

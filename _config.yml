@@ -88,12 +88,4 @@ deploy:
   - type: git
     repo: https://github.com/Shenmiu/shenmiu.github.io.git
     branch: master
-  - type: leancloud_counter_security_sync
-
-leancloud_counter_security:
-  enable_sync: true
-  app_id: BjsVlUcyDiTiy2fJ9zpYDr5h-gzGzoHsz   # 同前文的id
-  app_key: XE488fVKshgesnaeW2jzP6ID # 同前文的key
-  username: #如留空则将在部署时询问
-  password: #建议留空以保证安全性，如留空则将在部署时询问
 
