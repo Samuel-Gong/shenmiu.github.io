@@ -1,36 +1,39 @@
-language: node_js # 设置语言
-node_js: lts/* # 设置响应版本
+language: node_js
+node_js: lts/*
 cache:
   apt: true
   directories:
-    - node_modules # 缓存不经常更改的内容
+  - node_modules
+addons:
+  ssh_known_hosts: 39.100.254.254
 before_install:
-  - npm install hexo-cli -g
-  - npm install babel-runtime
-  - npm install hexo-generator-searchdb --save
-  - export TZ='Asia/Shanghai'
+- openssl aes-256-cbc -K $encrypted_e1fdc1b563a1_key -iv $encrypted_e1fdc1b563a1_iv
+  -in id_rsa.enc -out /tmp/id_rsa -d
+- eval "$(ssh-agent -s)"
+- chmod 600 /tmp/id_rsa
+- ssh-add /tmp/id_rsa
+- npm install hexo-cli -g
+- npm install babel-runtime
+- npm install hexo-generator-searchdb --save
+- npm install hexo-deployer-rsync --save
+- export TZ='Asia/Shanghai'
 install:
-  - npm install
-
+- npm install
 before_script:
-  - git config user.name "Shenmiu"
-  - git config user.email "gcm971016@gmail.com"
-  # 恢复 git 记录 
-  - sed -i'' "s~https://${GH_REF}~https://${GH_TOKEN}@${GH_REF}~" _config.yml
-  - git clone https://${GH_REF} bak
-  - cd bak
-  - git checkout master
-  - cd ../
-  - mkdir .deploy_git
-  - mv bak/.git/ .deploy_git
-
+- git config user.name "Shenmiu"
+- git config user.email "gcm971016@gmail.com"
+- sed -i'' "s~https://${GH_REF}~https://${GH_TOKEN}@${GH_REF}~" _config.yml
+- git clone https://${GH_REF} bak
+- cd bak
+- git checkout master
+- cd ../
+- mkdir .deploy_git
+- mv bak/.git/ .deploy_git
 script:
-  - hexo clean && hexo g && hexo d
-
+- hexo clean && hexo g && hexo d
 branches:
   only:
-    - hexo #只监测hexo分支
-
+  - hexo
 env:
   global:
-    - GH_REF: github.com/Shenmiu/shenmiu.github.io.git #设置GH_REF，注意更改
+  - GH_REF: github.com/Shenmiu/shenmiu.github.io.git
