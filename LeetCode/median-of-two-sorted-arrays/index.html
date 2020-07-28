@@ -101,7 +101,7 @@
 <meta property="og:site_name" content="Shenmiu’s Blog">
 <meta property="og:description" content="题目给定两个大小为 m 和 n 的有序数组 nums1 和 nums2。 请你找出这两个有序数组的中位数，并且要求算法的时间复杂度为 $O(\log(m + n))$。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-29T06:17:19.849Z">
+<meta property="og:updated_time" content="2020-07-28T04:26:50.743Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode-4-寻找两个有序数组的中位数">
 <meta name="twitter:description" content="题目给定两个大小为 m 和 n 的有序数组 nums1 和 nums2。 请你找出这两个有序数组的中位数，并且要求算法的时间复杂度为 $O(\log(m + n))$。">
@@ -372,7 +372,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Shenmiu">
-      <meta itemprop="description" content>
+      <meta itemprop="description" content="日拱一卒，功不唐捐">
       <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
@@ -426,7 +426,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-09-29 14:17:19" itemprop="dateModified" datetime="2019-09-29T14:17:19+08:00">2019-09-29</time>
+                <time title="修改时间：2020-07-28 12:26:50" itemprop="dateModified" datetime="2020-07-28T12:26:50+08:00">2020-07-28</time>
               </span>
             
           
@@ -450,6 +450,18 @@
 
           
             
+            
+              
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/LeetCode/median-of-two-sorted-arrays/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/LeetCode/median-of-two-sorted-arrays/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -637,7 +649,6 @@
 
   
     <div class="comments" id="comments">
-      <div id="lv-container" data-id="city" data-uid="MTAyMC80MzI2OS8xOTgxMg=="></div>
     </div>
 
   
@@ -679,7 +690,7 @@
               <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="Shenmiu">
             
               <p class="site-author-name" itemprop="name">Shenmiu</p>
-              <div class="site-description motion-element" itemprop="description"></div>
+              <div class="site-description motion-element" itemprop="description">日拱一卒，功不唐捐</div>
           </div>
 
           
@@ -750,7 +761,16 @@
                   
                     
                   
-                  <a href="/gcm971016@gmail.com" title="E-Mail &rarr; gcm971016@gmail.com"><i class="fa fa-fw fa-envelope"></i></a>
+                  <a href="https://github.com/Shenmiu" title="GitHub &rarr; https://github.com/Shenmiu" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i></a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="/chenmiao.gong@gmail.com" title="E-Mail &rarr; chenmiao.gong@gmail.com"><i class="fa fa-fw fa-envelope"></i></a>
                 </span>
               
             </div>
@@ -797,7 +817,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
@@ -940,25 +960,35 @@
   
 
   
-
+  
 
   
-    
 
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
 
 <script>
-  window.livereOptions = {
-    refer: 'LeetCode/median-of-two-sorted-arrays/'
-  };
-  (function(d, s) {
-    var j, e = d.getElementsByTagName(s)[0];
-    if (typeof LivereTower === 'function') { return; }
-    j = d.createElement(s);
-    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-    j.async = true;
-    e.parentNode.insertBefore(j, e);
-  })(document, 'script');
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'vqd7jWF3ueqJEbIdqJXgimh1-gzGzoHsz',
+    appKey: 'tbTqDpm40jlJOle22WbW1q6o',
+    placeholder: '有什么想说的吗~',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: 'zh-cn' || 'zh-cn'
+  });
 </script>
+
+
+
 
   
 

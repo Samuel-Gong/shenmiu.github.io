@@ -93,13 +93,16 @@
 
 
 
-  <meta property="og:type" content="website">
+  <meta name="description" content="日拱一卒，功不唐捐">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Shenmiu’s Blog">
 <meta property="og:url" content="http://blog.shenmiu.top/categories/advanced-algorithm/index.html">
 <meta property="og:site_name" content="Shenmiu’s Blog">
+<meta property="og:description" content="日拱一卒，功不唐捐">
 <meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Shenmiu’s Blog">
+<meta name="twitter:description" content="日拱一卒，功不唐捐">
 
 
 
@@ -447,7 +450,7 @@
               <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="Shenmiu">
             
               <p class="site-author-name" itemprop="name">Shenmiu</p>
-              <div class="site-description motion-element" itemprop="description"></div>
+              <div class="site-description motion-element" itemprop="description">日拱一卒，功不唐捐</div>
           </div>
 
           
@@ -518,7 +521,16 @@
                   
                     
                   
-                  <a href="/gcm971016@gmail.com" title="E-Mail &rarr; gcm971016@gmail.com"><i class="fa fa-fw fa-envelope"></i></a>
+                  <a href="https://github.com/Shenmiu" title="GitHub &rarr; https://github.com/Shenmiu" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i></a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="/chenmiao.gong@gmail.com" title="E-Mail &rarr; chenmiao.gong@gmail.com"><i class="fa fa-fw fa-envelope"></i></a>
                 </span>
               
             </div>
@@ -548,7 +560,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
@@ -687,6 +699,34 @@
   
 
   
+  
+
+  
+
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'vqd7jWF3ueqJEbIdqJXgimh1-gzGzoHsz',
+    appKey: 'tbTqDpm40jlJOle22WbW1q6o',
+    placeholder: '有什么想说的吗~',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: 'zh-cn' || 'zh-cn'
+  });
+</script>
+
+
 
 
 
