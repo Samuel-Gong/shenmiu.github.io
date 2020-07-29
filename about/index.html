@@ -96,11 +96,11 @@
   <meta name="description" content="日拱一卒，功不唐捐">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Shenmiu’s Blog">
-<meta property="og:url" content="http://blog.shenmiu.top/about/index.html">
+<meta property="og:url" content="https://blog.shenmiu.top/about/index.html">
 <meta property="og:site_name" content="Shenmiu’s Blog">
 <meta property="og:description" content="日拱一卒，功不唐捐">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-07-28T19:47:47.705Z">
+<meta property="og:updated_time" content="2020-07-29T06:13:40.793Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Shenmiu’s Blog">
 <meta name="twitter:description" content="日拱一卒，功不唐捐">
@@ -111,7 +111,7 @@
 
   
   
-  <link rel="canonical" href="http://blog.shenmiu.top/about/">
+  <link rel="canonical" href="https://blog.shenmiu.top/about/">
 
 
 
@@ -443,7 +443,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="Shenmiu">
+              <img class="site-author-image" itemprop="image" src="https://shenmiu.oss-cn-hangzhou.aliyuncs.com/uPic/2020-07-29-1.jpg" alt="Shenmiu">
             
               <p class="site-author-name" itemprop="name">Shenmiu</p>
               <div class="site-description motion-element" itemprop="description">日拱一卒，功不唐捐</div>
@@ -721,7 +721,7 @@
     avatar: 'mm',
     meta: guest,
     pageSize: '10' || 10,
-    visitor: false,
+    visitor: true,
     lang: 'zh-cn' || 'zh-cn'
   });
 </script>
@@ -1056,74 +1056,6 @@
 
 
   
-  
-  <script>
-    
-    function showTime(Counter) {
-      var entries = [];
-      var $visitors = $('.leancloud_visitors');
-
-      $visitors.each(function() {
-        entries.push( $(this).attr('id').trim() );
-      });
-
-      Counter('get', '/classes/Counter', { where: JSON.stringify({ url: { '$in': entries } }) })
-        .done(function({ results }) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.url;
-            var time = item.time;
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for (var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if (countSpan.text() == '') {
-              countSpan.text(0);
-            }
-          }
-        })
-        .fail(function ({ responseJSON }) {
-          console.log('LeanCloud Counter Error: ' + responseJSON.code + ' ' + responseJSON.error);
-        });
-    }
-    
-
-    $(function() {
-      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'vqd7jWF3ueqJEbIdqJXgimh1-gzGzoHsz')
-        .done(function({ api_server }) {
-          var Counter = function(method, url, data) {
-            return $.ajax({
-              method: method,
-              url: 'https://' + api_server + '/1.1' + url,
-              headers: {
-                'X-LC-Id': 'vqd7jWF3ueqJEbIdqJXgimh1-gzGzoHsz',
-                'X-LC-Key': 'tbTqDpm40jlJOle22WbW1q6o',
-                'Content-Type': 'application/json',
-              },
-              data: data
-            });
-          };
-          
-            if ($('.post-title-link').length >= 1) {
-              showTime(Counter);
-            }
-          
-        });
-    });
-  </script>
-
-
 
   
 
