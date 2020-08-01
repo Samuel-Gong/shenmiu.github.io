@@ -2,6 +2,34 @@ p {
   margin: 0 0 10px 0;
 }
 
+.post-body {
+  font-family: 'Noto Serif SC', "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+code {
+  font-family: consolas, Menlo, monospace, "PingFang SC", "Microsoft YaHei";
+}
+
 body {
-    font-family: 'Noto Sans',"PingFang SC","Microsoft YaHei",sans-serif;
+    background:url(/images/background.jpg);
+    background-repeat: no-repeat;
+    background-attachment:fixed; //不重复
+    background-size: cover;      //填充
+    background-position:50% 50%;
+}
+
+//博客内容透明化
+//文章内容的透明度设置
+.content-wrap {
+  opacity: 0.9;
+}
+
+//侧边框的透明度设置
+.sidebar {
+  opacity: 0.9;
+}
+
+//菜单栏的透明度设置
+.header-inner {
+  background: rgba(255,255,255,0.9);
 }

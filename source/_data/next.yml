@@ -215,7 +215,7 @@ toc:
   # If true, all level of TOC in a post will be displayed, rather than the activated part of it.
   expand_all: false
   # Maximum heading depth of generated toc.
-  max_depth: 5
+  max_depth: 6
 
 # music player
 aplayer:
@@ -432,7 +432,7 @@ font:
   # Global font settings used for all elements inside <body>.
   global:
     external: true
-    family: Noto Sans
+    family: Noto Serif SC
     size:
 
   # Font settings for site title (.site-title).
@@ -456,7 +456,7 @@ font:
   # Font settings for <code> and code blocks.
   codes:
     external: true
-    family: Roboto Mono
+    family: consolas
     size: 0.5
 
 
