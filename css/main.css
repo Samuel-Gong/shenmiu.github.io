@@ -176,9 +176,9 @@ body {
 body {
   background: var(--body-bg-color);
   color: var(--text-color);
-  font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Noto Sans', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 1em;
-  line-height: 2;
+  line-height: 1.6;
 }
 @media (max-width: 991px) {
   body {
@@ -192,28 +192,28 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Noto Sans', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-weight: bold;
   line-height: 1.5;
   margin: 20px 0 15px;
 }
 h1 {
-  font-size: 1.5em;
-}
-h2 {
-  font-size: 1.375em;
-}
-h3 {
   font-size: 1.25em;
 }
-h4 {
+h2 {
   font-size: 1.125em;
 }
-h5 {
+h3 {
   font-size: 1em;
 }
-h6 {
+h4 {
   font-size: 0.875em;
+}
+h5 {
+  font-size: 0.75em;
+}
+h6 {
+  font-size: 0.625em;
 }
 p {
   margin: 0 0 20px 0;
@@ -281,7 +281,7 @@ kbd {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-  font-size: 0.875em;
+  font-size: 0.85em;
   margin: 0 0 20px 0;
   width: 100%;
 }
@@ -317,7 +317,7 @@ td {
   border-radius: 2px;
   color: var(--btn-default-color);
   display: inline-block;
-  font-size: 0.875em;
+  font-size: 0.85em;
   line-height: 2;
   padding: 0 20px;
   text-decoration: none;
@@ -386,12 +386,12 @@ td {
 pre {
   background: #f7f7f7;
   color: #4d4d4c;
-  line-height: 1.6;
+  line-height: 1.5;
   margin: 0 auto 20px;
 }
 pre,
 code {
-  font-family: consolas, Menlo, monospace, "PingFang SC", "Microsoft YaHei";
+  font-family: 'Roboto Mono', consolas, Menlo, monospace, "PingFang SC", "Microsoft YaHei";
 }
 code {
   background: #eee;
@@ -422,7 +422,7 @@ code {
   background: #eff2f3;
   color: #4d4d4c;
   display: flex;
-  font-size: 0.875em;
+  font-size: 0.85em;
   justify-content: space-between;
   line-height: 1.2;
   padding: 0.5em;
@@ -464,7 +464,7 @@ pre {
 pre code {
   background: none;
   color: #4d4d4c;
-  font-size: 0.875em;
+  font-size: 0.85em;
   padding: 0;
   text-shadow: none;
 }
@@ -984,7 +984,7 @@ pre .javascript .function {
   border-bottom: none;
   color: var(--brand-color);
   display: inline-block;
-  line-height: 1.375em;
+  line-height: 1.25em;
   padding: 0 40px;
   position: relative;
 }
@@ -992,8 +992,8 @@ pre .javascript .function {
   color: var(--brand-hover-color);
 }
 .site-title {
-  font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
-  font-size: 1.375em;
+  font-family: 'Noto Sans', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 1.25em;
   font-weight: normal;
   margin: 0;
 }
@@ -1172,7 +1172,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #04ffff;
+  background: #ff993c;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1207,7 +1207,7 @@ pre .javascript .function {
   margin-top: 10px;
 }
 .links-of-blogroll-title {
-  font-size: 0.875em;
+  font-size: 0.85em;
   font-weight: 600;
   margin-top: 0;
 }
@@ -1247,7 +1247,7 @@ pre .javascript .function {
   color: #555;
   cursor: pointer;
   display: inline-block;
-  font-size: 0.875em;
+  font-size: 0.85em;
 }
 .sidebar-nav li.sidebar-nav-overview {
   margin-left: 10px;
@@ -1292,7 +1292,7 @@ pre .javascript .function {
   background: #fc6423;
 }
 .post-toc {
-  font-size: 0.875em;
+  font-size: 0.85em;
 }
 .post-toc ol {
   list-style: none;
@@ -1357,7 +1357,7 @@ pre .javascript .function {
 }
 .site-state-item-count {
   display: block;
-  font-size: 1em;
+  font-size: 0.875em;
   font-weight: 600;
   text-align: center;
 }
@@ -1367,7 +1367,7 @@ pre .javascript .function {
 }
 .footer {
   color: #999;
-  font-size: 0.875em;
+  font-size: 0.85em;
   padding: 20px 0;
 }
 .footer.footer-fixed {
@@ -1394,7 +1394,7 @@ pre .javascript .function {
 }
 .languages {
   display: inline-block;
-  font-size: 1.125em;
+  font-size: 1em;
   position: relative;
 }
 .languages .lang-select-label span {
@@ -1511,23 +1511,23 @@ pre .javascript .function {
   }
 }
 .post-body {
-  font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Noto Sans', "PingFang SC", "Microsoft YaHei", sans-serif;
   overflow-wrap: break-word;
   word-wrap: break-word;
 }
 @media (min-width: 1200px) {
   .post-body {
-    font-size: 1.125em;
+    font-size: 1em;
   }
 }
 .post-body .exturl .fa {
-  font-size: 0.875em;
+  font-size: 0.85em;
   margin-left: 4px;
 }
 .post-body .image-caption,
 .post-body .figure .caption {
   color: #999;
-  font-size: 0.875em;
+  font-size: 0.85em;
   font-weight: bold;
   line-height: 1;
   margin: -20px auto 15px;
@@ -1566,7 +1566,7 @@ pre .javascript .function {
   }
 }
 .posts-collapse .collection-title {
-  font-size: 1.125em;
+  font-size: 1em;
   position: relative;
 }
 .posts-collapse .collection-title::before {
@@ -1664,7 +1664,7 @@ pre .javascript .function {
   width: 4px;
 }
 .posts-collapse .fa-external-link {
-  font-size: 0.875em;
+  font-size: 0.85em;
   margin-left: 5px;
 }
 .post-eof {
@@ -1768,7 +1768,7 @@ pre .javascript .function {
   margin: 0;
 }
 .posts-expand .post-header {
-  font-size: 1.125em;
+  font-size: 1em;
 }
 .posts-expand .post-title {
   font-size: 1.5em;
@@ -1804,18 +1804,18 @@ pre .javascript .function {
   visibility: visible;
 }
 .posts-expand .post-title-link .fa {
-  font-size: 0.875em;
+  font-size: 0.85em;
   margin-left: 5px;
 }
 .posts-expand .post-meta {
   color: #999;
-  font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Noto Sans', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 0.75em;
   margin: 3px 0 60px 0;
   text-align: center;
 }
 .posts-expand .post-meta .post-description {
-  font-size: 0.875em;
+  font-size: 0.85em;
   margin-top: 2px;
 }
 .posts-expand .post-meta time {
@@ -1855,7 +1855,7 @@ pre .javascript .function {
 .post-nav-item a {
   border-bottom: none;
   display: block;
-  font-size: 0.875em;
+  font-size: 0.85em;
   line-height: 1.6;
   position: relative;
 }
@@ -1926,7 +1926,7 @@ pre .javascript .function {
 }
 .social-like {
   display: flex;
-  font-size: 0.875em;
+  font-size: 0.85em;
   justify-content: center;
   text-align: center;
 }
@@ -2673,4 +2673,10 @@ mjx-container + br {
   .pagination {
     margin: 8px 0 0;
   }
+}
+p {
+  margin: 0 0 10px 0;
+}
+body {
+  font-family: 'Noto Sans', "PingFang SC", "Microsoft YaHei", sans-serif;
 }
