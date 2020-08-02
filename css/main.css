@@ -1172,7 +1172,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #cd36ff;
+  background: #85fcf4;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2684,7 +2684,7 @@ code {
   font-family: consolas, Menlo, monospace, "PingFang SC", "Microsoft YaHei";
 }
 body {
-  background: url("/images/background.jpg");
+  background: url("https://shenmiu.oss-cn-hangzhou.aliyuncs.com/uPic/2020-8-3-background.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
